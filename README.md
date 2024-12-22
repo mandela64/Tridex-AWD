@@ -1,2 +1,2 @@
 # Tridex-AWD
-Idex Trident AWD
+Trident AWD Idex

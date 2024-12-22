@@ -9,7 +9,7 @@ Purchased parts:
 
 Printed parts:
 - X axis is based on aTinyShellScript AWD mod. 
-- Y axis motor mount and gantry bracket is my design with a front tensioner inspired by clee BZI tensioner.
+- Y axis motor mount and X-Beam gantry bracket is my design with a front tensioner inspired by clee BZI tensioner.
 - MetalTap adapters allow 6mm belts to pass behind toolheads.
 
 Warning: Y-Axis front tensioners require additional z-height clearance. I am using the Mandala Rose Work matched height kinematic kit.

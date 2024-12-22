@@ -1,4 +1,4 @@
-# Tridex-AWD
+# Tridex-AWD (Work in progress)
 
 Goal is to add AWD to the Voron Tridex.
 

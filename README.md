@@ -14,8 +14,7 @@ Printed parts:
 
 ![TridexAWD](https://github.com/user-attachments/assets/9bf6e760-6f2b-454d-bc02-ef340b466081)
 
-Based on eddietheengineers Tridex printer <https://github.com/FrankenVoron/Tridex/tree/main>
-
-Links:
-- aTinyShellScript <https://docs.atinyshellscript.com/v2.4/awd/)>
-- clee <https://github.com/clee/VoronBFI>
+Based on:
+- eddietheengineers Tridex printer <https://github.com/FrankenVoron/Tridex/tree/main>
+- aTinyShellScript AWD <https://docs.atinyshellscript.com/v2.4/awd/)>
+- clee BZI <https://github.com/clee/VoronBFI>

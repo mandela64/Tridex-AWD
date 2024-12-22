@@ -12,7 +12,7 @@ Printed parts:
 - Y axis motor mount and gantry bracket is my design with a front tensioner inspired by clee BZI tensioner.
 - MetalTap adapters allow 6mm belts to pass behind toolheads.
 
-* Y-Axis front tensioner requires additional z-height. I am currently using the Mandala Rose Work matched height kinematic kit.
+Warning: Y-Axis front tensioners require additional z-height clearance. I am using the Mandala Rose Work matched height kinematic kit.
 
 ![TridexAWD](https://github.com/user-attachments/assets/9bf6e760-6f2b-454d-bc02-ef340b466081)
 

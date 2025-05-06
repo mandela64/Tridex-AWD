@@ -13,7 +13,8 @@ Printed parts:
 - MetalTap adapters allow 6mm belts to pass behind toolheads.
 
 Warning: 
-- Klipper Pull Request to allow Multiple steppers per axis on Hybrid CoreXY #6754 (Pending)
+- Klipper Pull Request to allow Multiple steppers per axis on Hybrid CoreXY #6754 (replaced by #6815)
+- New pull request Generic Cartesian kinematics implementation #6815 (Pending)
 - Y-Axis front tensioners require additional z-height clearance. I am using the Mandala Rose Work matched height kinematic kit.
 
 ![TridexAWD](https://github.com/user-attachments/assets/9bf6e760-6f2b-454d-bc02-ef340b466081)

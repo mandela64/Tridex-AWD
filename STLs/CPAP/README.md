@@ -1,4 +1,4 @@
-FOR REFERENCE ONLY
+FOR REFERENCE ONLY (Beta)
 
 bigtreetech_ebb42_cpap.cfg
 
@@ -54,6 +54,35 @@ gcode:
 		{% endif %}
 	{% endif %}
 
+[gcode_macro _SET_CPAP_FLAP_ANGLE]
+description: Set stepper motor angle based on fan0 and fan1 speeds
+gcode:
+    {% set dcvars = printer["gcode_macro DC_VARS"] %}
+    {% set fan0_speed = printer["fan_generic " + dcvars.fan0].speed | float %}
+    {% set fan1_speed = printer["fan_generic " + dcvars.fan1].speed | float %}  
+    {% set max_fan_speed = 255.0 %}
+    {% set max_angle = 56.543 %}
+    {% set steps_per_degree = 1150 %}
+
+    # Calculate individual fan angles
+    {% set fan0_angle = ((fan0_speed / max_fan_speed) * max_angle) * steps_per_degree %}
+    {% set fan1_angle = ((fan1_speed / max_fan_speed) * max_angle) * steps_per_degree %}
+
+    # Select motor angle based on active toolheads
+    {% if printer.dual_carriage is defined %}
+        {% if printer.dual_carriage is defined and printer.toolhead.extruder in ['extruder', 'extruder1'] %}
+            {% if (printer.dual_carriage.carriage_1 == 'MIRROR') or (printer.dual_carriage.carriage_1 == 'COPY') %}
+                MANUAL_STEPPER STEPPER=flap_stepper MOVE={(127.5 + (fan0_angle / 2) - (fan1_angle / 2)) | int} SYNC=1
+            {% else %}
+                {% if printer.toolhead.extruder == 'extruder' %}
+                    MANUAL_STEPPER STEPPER=flap_stepper MOVE={fan0_angle | int} SYNC=1
+                {% elif printer.toolhead.extruder == 'extruder1' %}
+                    MANUAL_STEPPER STEPPER=flap_stepper MOVE={(255 - fan1_angle) | int} SYNC=1
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+    
 [gcode_macro _START_CPAP_FAN]
 gcode:
     SET_FAN_SPEED FAN=cpap_fan SPEED=0.06

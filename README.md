@@ -23,3 +23,4 @@ Based on:
 - eddietheengineers Tridex printer <https://github.com/FrankenVoron/Tridex/tree/main>
 - aTinyShellScript AWD <https://docs.atinyshellscript.com/v2.4/awd/)>
 - clee BZI <https://github.com/clee/VoronBFI>
+- vital78 Flap Controlled CPAP <https://github.com/vitals78/Flap-controlled-CPAP/tree/main>
